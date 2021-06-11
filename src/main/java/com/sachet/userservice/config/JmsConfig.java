@@ -1,6 +1,7 @@
 package com.sachet.userservice.config;
 
 //import org.apache.activemq.artemis.jms.client.ActiveMQQueue;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.autoconfigure.jms.DefaultJmsListenerContainerFactoryConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,10 +20,11 @@ public class JmsConfig {
 
     //Serialize message content to json using Text Messages
     @Bean
-    public MessageConverter messageConverter(){
+    public MessageConverter messageConverter(ObjectMapper objectMapper){
         MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
         converter.setTargetType(MessageType.TEXT);
         converter.setTypeIdPropertyName("_type");
+        converter.setObjectMapper(objectMapper);
         return converter;
     }
 

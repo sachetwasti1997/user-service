@@ -1,5 +1,7 @@
 package com.sachet.userservice.dto;
 
+import com.sachet.userservice.entity.Events;
+
 import java.util.List;
 
 public class Department {

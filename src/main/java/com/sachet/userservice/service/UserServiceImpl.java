@@ -1,9 +1,8 @@
 package com.sachet.userservice.service;
 
-import com.sachet.userservice.config.JmsConfig;
 import com.sachet.userservice.custom_error.UserNotFoundException;
 import com.sachet.userservice.dto.Department;
-import com.sachet.userservice.dto.Events;
+import com.sachet.userservice.entity.Events;
 import com.sachet.userservice.dto.UserDepartment;
 import com.sachet.userservice.entity.User;
 import com.sachet.userservice.repository.UserRepository;

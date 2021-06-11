@@ -1,9 +1,8 @@
 package com.sachet.userservice.controller;
 
 import com.sachet.userservice.custom_error.UserNotFoundException;
-import com.sachet.userservice.dto.Events;
+import com.sachet.userservice.entity.Events;
 import com.sachet.userservice.entity.User;
-import com.sachet.userservice.error_to_return.ApiError;
 import com.sachet.userservice.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

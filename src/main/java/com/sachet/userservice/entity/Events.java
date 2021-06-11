@@ -1,8 +1,11 @@
-package com.sachet.userservice.dto;
+package com.sachet.userservice.entity;
 
+import com.sachet.userservice.dto.Department;
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class Events {
+public class Events implements Serializable {
 
     private Long id;
     private String eventName;
