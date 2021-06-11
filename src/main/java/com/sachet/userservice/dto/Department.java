@@ -1,11 +1,14 @@
 package com.sachet.userservice.dto;
 
+import java.util.List;
+
 public class Department {
 
     private Long id;
     private String departmentName;
     private Address departmentAddress;
     private String departmentCode;
+    List<Events> events;
 
     public Department() {
     }
@@ -47,5 +50,23 @@ public class Department {
 
     public void setDepartmentCode(String departmentCode) {
         this.departmentCode = departmentCode;
+    }
+
+    public List<Events> getEvents() {
+        return events;
+    }
+
+    public void setEvents(List<Events> events) {
+        this.events = events;
+    }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "id=" + id +
+                ", departmentName='" + departmentName + '\'' +
+                ", departmentAddress=" + departmentAddress +
+                ", departmentCode='" + departmentCode + '\'' +
+                '}';
     }
 }

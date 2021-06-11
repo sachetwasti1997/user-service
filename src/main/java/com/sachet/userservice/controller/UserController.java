@@ -1,6 +1,7 @@
 package com.sachet.userservice.controller;
 
 import com.sachet.userservice.custom_error.UserNotFoundException;
+import com.sachet.userservice.dto.Events;
 import com.sachet.userservice.entity.User;
 import com.sachet.userservice.error_to_return.ApiError;
 import com.sachet.userservice.service.UserService;
@@ -33,5 +34,10 @@ public class UserController {
     @GetMapping("/{id}/department")
     public ResponseEntity<?> getUserWithDepartment(@PathVariable Long id) throws UserNotFoundException{
         return new ResponseEntity<>(userService.getUserWithDepartment(id), HttpStatus.OK);
+    }
+
+    @PostMapping("/event/{id}")
+    public ResponseEntity<?> createEvent(@PathVariable Long id, @RequestBody Events events){
+        return new ResponseEntity<>(userService.createEvent(id, events), HttpStatus.OK);
     }
 }
